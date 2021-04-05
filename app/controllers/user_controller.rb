@@ -11,7 +11,7 @@ class UserController < ApplicationController
     post "/user/:id" do 
         @user = User.find(params[:id])
         if !params[:post_body].empty?
-            @user.posts << Post.create(:post_body => params[:post_body])
+            @user.posts << Post.create(:post_body => params[:post_body], :post_img => params[:post_img], :post_desc => params[:post_desc])
         end 
         redirect "/user/#{@user.id}"
     end 

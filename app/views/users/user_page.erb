@@ -2,7 +2,7 @@
 <h2 class="subheader">Add a Coral</h2>
 <form action="/user/<%= @user.id %>" method="POST">
     <input type="text" name="post_body" placeholder="Name" required>
-    <input type="text" name="post_img" placeholder="Image" required>
+    <input type="url" name="post_img" placeholder="Image" required>
     <input type="text" name="post_desc" placeholder="Description" maxlength="50" required>
     <input type="submit" value="add">
 </form>

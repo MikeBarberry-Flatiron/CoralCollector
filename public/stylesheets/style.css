@@ -19,7 +19,17 @@ h1 {
 }
 
 h2 {
-    color: skyblue
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
+.login_button{
+    background-color: #585858;
+    color: #fff; 
+    cursor: pointer; 
+    padding: 10px 30px; 
+    display: inline-block;
+    border-radius: 25px;
 }
 
 a {
@@ -33,12 +43,14 @@ input {
     box-sizing: border-box;
     display: block;
     align-items: center;
+    border-radius: 25px;
    
 }
 
 input[type=submit] {
     background-color: dodgerblue;
     color: antiquewhite;
+    border-radius: 25px;
 }
 
 input[type=submit]:hover {
@@ -70,6 +82,10 @@ input[type=submit]:hover {
     justify-self: center;
 }
 
-#logout {
+#warning {
+    color: red;
+}
+
+#footer {
     color: tan
 }

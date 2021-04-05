@@ -1,13 +1,15 @@
 <h1><%= @post.post_body %></h1>
 <form action="/post/<%= @post.id %>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <input type="text" name="edit_body" placeholder="Edit Post Body" required>
-    <input type="text" name="edit_img" placeholder="Edit Post Body" required>
-    <input type="text" name="edit_desc" placeholder="Edit Post Body" required>
+    <input type="text" name="edit_body" placeholder="edit title" required>
+    <input type="text" name="edit_img" placeholder="edit image" required>
+    <input type="text" name="edit_desc" placeholder="edit description" required>
     <input type="submit" value="edit">
 </form>
 <form action="/post/<%= @post.id %>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" value="delete">
 </form>
-<script >
+
+<h3 id="footer"><a href="/user/<%=@user.id%>">Back</a></h3>
+<h3 id="footer"><a href="/logout">Logout</a></h3>

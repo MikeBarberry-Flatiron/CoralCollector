@@ -1,5 +1,5 @@
-<h1>Hi, <%= @user.username %>. You're Logged In!</h1>
-<h2>Add a Coral</h2>
+<h1>Hi, <%= @user.username.capitalize %>! You're Logged In.</h1>
+<h2 class="subheader">Add a Coral</h2>
 <form action="/user/<%= @user.id %>" method="POST">
     <input type="text" name="post_body" placeholder="Name" required>
     <input type="text" name="post_img" placeholder="Image" required>
@@ -7,7 +7,7 @@
     <input type="submit" value="add">
 </form>
 
-<h2>Your Corals</h2>
+<h2 class="subheader">Your Corals</h2>
 <div id="user_content">
         <% @user.posts.each do |post| %>
         <div id="user_post">
@@ -19,4 +19,4 @@
         <% end %>
 </div>
 
-<h3 id="logout">Click<a href="/logout"> Here</a> to Logout</h3>
+<h3 id="footer"><a href="/logout">Logout</a></h3>

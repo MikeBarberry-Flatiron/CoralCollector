@@ -1,6 +1,7 @@
 class PostController < ApplicationController
     get "/post/:id" do 
         @post = Post.find(params[:id])
+        @user = current_user
         if current_user.posts.include?(@post)
             erb :'/posts/post_page'
         else 

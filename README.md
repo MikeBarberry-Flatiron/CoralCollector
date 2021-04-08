@@ -1,6 +1,8 @@
 # Coral Collection
 A Sinatra CRUD application for corals 
 
+![alt text](https://i.imgur.com/PVt1KUC.png)
+
 # Running the App
 Verify that ruby, postgres, and bundler are installed on your machine. <br>
 Git clone into a new directory. <br>

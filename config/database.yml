@@ -8,5 +8,5 @@ development:
   database: coral_collector
 
 production:
-	<<: *default
-	database: coral_collector
+  <<: *default
+  database: coral_collector

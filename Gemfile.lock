@@ -73,7 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (= 5.2.3)
+  activerecord
   bcrypt
   database_cleaner
   pg

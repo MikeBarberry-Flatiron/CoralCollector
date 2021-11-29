@@ -1,8 +1,4 @@
-[Live Demo!](https://enigmatic-fortress-21892.herokuapp.com/)
-
-<br />
-
-Screenshot of a user account 
+Screenshot of the app: 
 <br />
 
 ![alt text](https://i.imgur.com/90lh1aM.png)

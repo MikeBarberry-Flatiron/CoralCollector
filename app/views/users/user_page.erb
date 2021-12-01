@@ -9,13 +9,17 @@
 
 <h2 class="subheader">Your Corals</h2>
 <div id="user_content">
-        <% @user.posts.each do |post| %>
-        <div id="user_post">
-            <h2><%= post.post_body %></h2>
-            <img src=<%=post.post_img%> alt="coral" id="coral_image">
-            <p class="description"><%=post.post_desc%></p>
-            <a href="/post/<%= post.id %>">edit</a>
-        </div>
+        <% if @user.posts.length > 1 %>
+            <% @user.posts.each do |post| %>
+            <div id="user_post">
+                <h2><%= post.post_body %></h2>
+                <img src=<%=post.post_img%> alt="coral" id="coral_image">
+                <p class="description"><%=post.post_desc%></p>
+                <a href="/post/<%= post.id %>">edit</a>
+            </div>
+            <% end %>
+        <% else %>
+            <h3 id="add-content-message"> You don't have any posts yet. Add something to get started...</h3> 
         <% end %>
 </div>
 <br>

@@ -3,19 +3,25 @@
 <form action="/user/<%= @user.id %>" method="POST">
     <input type="text" name="post_body" placeholder="Name" minlength="3" maxlength="16" required>
     <input type="url" name="post_img" placeholder="Image" required>
-    <input type="text" name="post_desc" placeholder="Description" minlength="10" maxlength="50" required>
+    <input type="text" name="post_desc" placeholder="Description" minlength="3" maxlength="50" required>
     <input type="submit" value="add">
 </form>
 
 <h2 class="subheader">Your Corals</h2>
 <div id="user_content">
-        <% @user.posts.each do |post| %>
-        <div id="user_post">
-            <h2><%= post.post_body %></h2>
-            <img src=<%=post.post_img%> alt="coral" id="coral_image">
-            <p class="description"><%=post.post_desc%></p>
-            <a href="/post/<%= post.id %>">edit</a>
-        </div>
+        <% if @user.posts.length < 1 %>
+            <h3 id="add-content-message"> You don't have any posts yet. Add something to get started...</h3> 
+        <% else %>
+            <% @user.posts.each do |post| %>
+                <div id="user_post">
+                    <h2><%= post.post_body %></h2>
+                    <img src=<%=post.post_img%> alt="coral" id="coral_image">
+                    <p class="description"><%=post.post_desc%></p>
+                    <form action="/post/<%= post.id %>" id="edit_form" method="GET">
+                        <input type="submit" value="edit" id="edit_button">
+                    </form>
+                </div>
+            <% end %>
         <% end %>
 </div>
 <br>

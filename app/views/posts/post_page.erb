@@ -6,7 +6,7 @@
     <input id="hidden" type="hidden" name="_method" value="patch">
     <input type="text" name="edit_body" placeholder="edit title" value="<%= @post.post_body%>" minlength="3" maxlength="16" required>
     <input type="url" name="edit_img" placeholder="edit image" value="<%= @post.post_img%>" required>
-    <input type="text" name="edit_desc" placeholder="edit description" value="<%= @post.post_desc%>" minlength="10" maxlength="50" required>
+    <input type="text" name="edit_desc" placeholder="edit description" value="<%= @post.post_desc%>" minlength="3" maxlength="50" required>
     <input type="submit" value="edit">
 </form>
 <form action="/post/<%= @post.id %>" method="POST">
